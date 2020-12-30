@@ -5327,6 +5327,7 @@ void setup()
         }
         if (WiFi.status() == WL_CONNECTED)
         {
+          WiFi.mode(WIFI_MODE_STA);          
           if (MDNS.begin(ESP_HOST_NAME.c_str()))
           {
             Serial.println("MDNS responder started");
